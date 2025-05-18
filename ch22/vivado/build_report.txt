@@ -1,0 +1,6 @@
+ 2025.01.01 : Added Feature-A to top.v, core.v
+   Utilization:
+     LUT as Logic      1629 of 20800 = 7.83%
+     Slice Registers   2716 of 41600 = 6.53%
+     Block RAM Tile     2.5 of 50    = 5.00%
+   Runtime: 2 minutes

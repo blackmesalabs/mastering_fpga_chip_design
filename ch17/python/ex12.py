@@ -1,0 +1,10 @@
+a = "one two";
+a = a + " three";       # "one two three"
+b = a.find("one");      # 0
+b = a.find("four");     # -1
+b = a.find("e");        # 2
+b = a.count("e");       # 3
+b = len( a );           # 13
+b = a.upper();          # "ONE TWO THREE"
+c = b.lower();          # "one two three"
+b = a.replace("o","O"); # "One twO three"

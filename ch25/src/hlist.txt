@@ -1,0 +1,20 @@
+# ChipVault hlist.txt hierarchy list file
+hlist.txt
+top.v
+  ../src_ip/sump3_top.v
+  ../src_ip/sumpa_fe.v
+  ../src_ip/sump3_core.v
+  ../src_ip/sump3_rle_hub.v
+  ../src_ip/sump3_rle_pod.v
+  ../src_ip/ft232_xface.v
+    ../src_ip/mesa_uart_phy.v
+      ../src_ip/mesa_uart.v
+      ../src_ip/mesa_tx_uart.v
+      ../src_ip/mesa_byte2ascii.v
+      ../src_ip/mesa_ascii2nibble.v
+    ../src_ip/mesa_decode.v
+    ../src_ip/mesa2lb.v
+    ../src_ip/mesa_id.v
+      ../src_ip/time_stamp.v
+    ../src_ip/mesa2ctrl.v
+# EOF

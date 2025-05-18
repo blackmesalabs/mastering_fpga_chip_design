@@ -1,0 +1,26 @@
+[:toc: macro]
+[:toc-title:]
+= My Book Title
+My Name
+My Version
+:pdf-width: 6in
+:pdf-height: 9in
+:imagesdir: ./assets
+
+image::my_image.png[pdfwidth=75%,scaledwidth=75%,align="center"]
+
+[.text-center]
+[discrete]
+== Some Text
+
+<<<
+include::intro.adoc[]
+
+== Table of Contents
+toc::[]
+ 
+<<<
+
+include::chapter1.adoc[]
+[index]
+== Index

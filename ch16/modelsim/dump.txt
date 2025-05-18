@@ -1,0 +1,10 @@
+DOUT = 0
+DOUT = 0
+DOUT = 1
+DOUT = 2
+DOUT = 3
+DOUT = 4
+DOUT = A
+DOUT = B
+DOUT = C
+DOUT = D

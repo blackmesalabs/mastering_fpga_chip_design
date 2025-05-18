@@ -1,0 +1,2 @@
+verilog work "$XILINX_VIVADO/data/verilog/src/glbl.v"
+verilog work "top.v"

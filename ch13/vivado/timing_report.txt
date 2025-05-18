@@ -1,0 +1,76 @@
+344 ----------------------------------------------------------------------------------
+345 From Clock:  sys_clk_pin
+346   To Clock:  sys_clk_pin
+347 
+348 Setup :     1  Failing Endpoint , Worst Slack -0.351ns, Total Violation -0.351ns
+349 Hold  :     0  Failing Endpoints, Worst Slack  0.146ns, Total Violation  0.000ns
+350 PW    :     0  Failing Endpoints, Worst Slack  0.520ns, Total Violation  0.000ns
+351 ----------------------------------------------------------------------------------
+352 
+353 
+354 Max Delay Paths
+355 ----------------------------------------------------------------------------------
+356 Slack (VIOLATED) :        -0.351ns  (required time - arrival time)
+357   Source:                 cnt_b_p1_reg[38]/C
+358                           (rising edge-triggered cell FDRE clocked by sys_clk_pin
+                                   {rise@0.000ns fall@1.500ns period=3.000ns})
+359   Destination:            not_all_zero_p2_reg_srl3_srlopt/D
+360                           (rising edge-triggered cell FDRE clocked by sys_clk_pin  
+                                   {rise@0.000ns fall@1.500ns period=3.000ns})
+361   Path Group:             sys_clk_pin
+362   Path Type:              Setup (Max at Slow Process Corner)
+363   Requirement:            3.00ns (sys_clk_pin rise@3.00ns-sys_clk_pin rise@0.00ns)
+364   Data Path Delay:        3.37ns (logic 0.828ns (24.567%) route 2.542ns (75.433%))
+365   Logic Levels:           3  (LUT5=1 LUT6=2)
+366   Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+367     Destination Clock Delay (DCD):    4.860ns = ( 7.860 - 3.000 )
+368     Source Clock Delay      (SCD):    5.158ns
+369     Clock Pessimism Removal (CPR):    0.274ns
+370   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+371     Total System Jitter     (TSJ):    0.071ns
+372     Total Input Jitter      (TIJ):    0.000ns
+373     Discrete Jitter          (DJ):    0.000ns
+374     Phase Error              (PE):    0.000ns
+375 
+376 Location      Delay type                Incr(ns) Path(ns)   Netlist Resources
+377---------------------------------------------------------    -----------------
+378               (clock sys_clk_pin rise edge)
+379                                            0.000   0.000 r
+380 W5                                         0.000   0.000 r  clk (IN)
+381               net (fo=0)                   0.000   0.000    clk
+382 W5            IBUF (Prop_ibuf_I_O)         1.458   1.458 r  clk_IBUF_inst/O
+383               net (fo=1, routed)           1.967   3.425    clk_IBUF
+384 BUFGCTRL_X0Y0 BUFGCTRL (Prop_bufgctrl_I0_O)
+385                                            0.096   3.521 r  u0_bufg/O
+386               net (fo=246, routed)         1.637   5.158    clk_333m
+387 SLICE_X3Y7    FDRE                                       r  cnt_b_p1_reg[38]/C
+388---------------------------------------------------------    ------------------
+389 SLICE_X3Y7    FDRE (Prop_fdre_C_Q)         0.456   5.614 r  cnt_b_p1_reg[38]/Q
+390               net (fo=1, routed)           0.800   6.414    cnt_b_p1[38]
+391 SLICE_X1Y7    LUT6 (Prop_lut6_I0_O)        0.124   6.538 r  not_all_zero_p2..
+392               net (fo=1, routed)           0.799   7.338    not_all_zero_p2..
+393 SLICE_X1Y6    LUT6 (Prop_lut6_I1_O)        0.124   7.462 r  not_all_zero_p2..
+394               net (fo=1, routed)           0.943   8.405    not_all_zero_p2..
+395 SLICE_X2Y5    LUT5 (Prop_lut5_I3_O)        0.124   8.529 r  not_all_zero_p2..
+396               net (fo=1, routed)           0.000   8.529    not_all_zero_p2..
+397 SLICE_X2Y5    FDRE                                       r  not_all_zero_p2..
+398---------------------------------------------------------    ------------------
+399
+400               (clock sys_clk_pin rise edge)
+401                                            3.000   3.000 r
+402 W5                                         0.000   3.000 r  clk (IN)
+403               net (fo=0)                   0.000   3.000    clk
+404 W5            IBUF (Prop_ibuf_I_O)         1.388   4.388 r  clk_IBUF_inst/O
+405               net (fo=1, routed)           1.862   6.250    clk_IBUF
+406 BUFGCTRL_X0Y0 BUFGCTRL (Prop_bufgctrl_I0_O)
+407                                            0.091   6.341 r  u0_bufg/O
+408               net (fo=246, routed)         1.519   7.860    clk_333m
+409 SLICE_X2Y5    FDRE                                       r  not_all_zero_p2..
+410               clock pessimism              0.274   8.134
+411               clock uncertainty           -0.035   8.099
+412 SLICE_X2Y5    FDRE (Setup_fdre_C_D)        0.079   8.178    not_all_zero_p2..
+413---------------------------------------------------------
+414               required time                        8.178
+415               arrival time                        -8.529
+416---------------------------------------------------------
+417               slack                               -0.351

@@ -1,0 +1,9 @@
+# hlist.txt for ChipVault
+verilog_example
+  top.v
+    core.v
+      my_74193.v
+vhdl_example
+  top.vhd
+    core.vhd
+      my_74193.vhd

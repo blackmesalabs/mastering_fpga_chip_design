@@ -1,0 +1,16 @@
+create_view my_custom_view
+create_group u1_pod_events
+create_signal fsm_st[1:0] -source ck100_hub.u1_pod[15:14]
+create_fsm_state 00 st_reset
+create_fsm_state 01 st_pause
+create_fsm_state 02 st_count
+create_fsm_state 03 st_unknown
+create_group led_cnt[31:28]
+create_signal led_cnt[28] -source ck100_hub.u1_pod[8] -triggerable True
+create_signal led_cnt[29] -source ck100_hub.u1_pod[9] -triggerable True
+create_signal led_cnt[30] -source ck100_hub.u1_pod[10] -triggerable True
+create_signal led_cnt[31] -source ck100_hub.u1_pod[11] -triggerable True
+end_group
+end_group
+end_view
+add_view

@@ -1,0 +1,32 @@
+== CHAPTER 1: My Chapter One
+ 
+=== First Heading
+A bunch of text.
+// A comment not to be displayed
+
+[quote, Source ]
+____
+Some quote
+____
+
+.MyPhoto 
+image::my_photo.png[pdfwidth=50%,scaledwidth=50%,align="center"]
+
+[TIP]
+Some tip
+
+NOTE: Some note
+
+indexterm2:[Important Word]
+
+.Code
+----
+Some Code
+----
+
+*Section Header*
+
+.A bullet list:
+* Bullet1
+* Bullet2
+<<<

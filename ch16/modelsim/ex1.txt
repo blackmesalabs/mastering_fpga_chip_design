@@ -1,0 +1,5 @@
+vsim tb_counter
+vcd file tb_counter.vcd
+vcd add tb_counter/u_counter/*
+run 1 us
+quit

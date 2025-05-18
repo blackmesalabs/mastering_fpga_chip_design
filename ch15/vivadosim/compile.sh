@@ -1,0 +1,1 @@
+xvlog -prj top.prj

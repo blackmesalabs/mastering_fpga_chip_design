@@ -1,0 +1,11 @@
+# This is my stimulus file
+1 0 0
+0 0 0
+0 0 0
+0 0 0
+# Waiting 10 clocks before load
+wait 10
+0 1 A
+0 0 0
+0 0 0
+0 0 0
